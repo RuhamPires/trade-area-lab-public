@@ -399,10 +399,15 @@ def create_app(catalog: WebCatalog | None = None):
 
     @app.get("/api/stations")
     def stations(uf: str | None = None, municipality: str | None = None, q: str | None = None, status: str = "all", offset: int = 0, limit: int = 200):
-        if any(value is not None and len(value) > 200 for value in (uf, municipality, q)):
-            _fail("Filtros de busca devem ter até 200 caracteres.")
         try:
             return current_catalog().search(uf=uf, municipality=municipality, q=q, status=status, offset=offset, limit=limit)
+        except ValueError as exc:
+            _fail(str(exc))
+
+    @app.get("/api/map-stations")
+    def map_stations(uf: str | None = None, municipality: str | None = None, q: str | None = None, status: str = "all", limit: int = 1000):
+        try:
+            return current_catalog().map_stations(uf=uf, municipality=municipality, q=q, status=status, limit=limit)
         except ValueError as exc:
             _fail(str(exc))
 

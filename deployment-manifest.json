@@ -5,8 +5,8 @@
   "files": [
     {
       "path": ".gitignore",
-      "bytes": 1115,
-      "sha256": "9b95e6f5a1fea3959db6944ea59d173489541c1881bed1e3a87939feddca91e3"
+      "bytes": 1127,
+      "sha256": "887f48eb88e0025910d43cdf85e8b6fdccd6d6bf80f992fa2d6456a69639e6e8"
     },
     {
       "path": ".python-version",
@@ -16,7 +16,7 @@
     {
       "path": ".vercelignore",
       "bytes": 1065,
-      "sha256": "44ab7e8b2f7197081bd109e6c275b112fedc47f028e966eb4b44afd15d15fa72"
+      "sha256": "09206a5f6b1cd9ec6a984d0e436e4ab9546ee6e90530e970b61c5229c71f7cfd"
     },
     {
       "path": "api/index.py",
@@ -29,14 +29,14 @@
       "sha256": "ed62a4f9e79c7fd5c0c99a25e48f4c7d6432c29f7e11f7e965d15f94e5af2d7e"
     },
     {
-      "path": "public/assets/index-BAG22F6b.js",
-      "bytes": 292446,
-      "sha256": "92b95847588027af8b39649f3a67b7db21db4e6c663c5d74305195eec230703c"
+      "path": "public/assets/index-B3BooWHS.css",
+      "bytes": 47393,
+      "sha256": "cb63a49eb616bbb9049366452707e107ab2e32c2ef4017734600a26960a0d0fe"
     },
     {
-      "path": "public/assets/index-BvJoJUJq.css",
-      "bytes": 29403,
-      "sha256": "57f223018d38b4b3e56eed279a6bf8703df4cc6499342d4fa95950ed13746aac"
+      "path": "public/assets/index-CuvCFNQI.js",
+      "bytes": 450862,
+      "sha256": "c6a8bc8faf31587eb87b80c1420dc711b756e6f666c72257af0ebfb6b18014b2"
     },
     {
       "path": "public/data/brasil-uf-source.json",
@@ -61,12 +61,12 @@
     {
       "path": "public/index.html",
       "bytes": 667,
-      "sha256": "49ff6ed3f5dee70f03168b0bd7b0e0c9e19f8882e8cbb6ab98792b41812c88aa"
+      "sha256": "a5ebebfc40ea70e3992b657cf1cfe9887be5269f40978c4286183b8e33c546eb"
     },
     {
       "path": "README.md",
-      "bytes": 1804,
-      "sha256": "2986978cca187119f2c42d101bedff2b542fd002644a3aa9b9d30d03a67c48e1"
+      "bytes": 1702,
+      "sha256": "5c0b56f8c466bc01a91fbc31d54783ede4892e002e15f1d1f370c5c3de98a5e3"
     },
     {
       "path": "render.yaml",
@@ -140,13 +140,13 @@
     },
     {
       "path": "src/trade_area_local/web_api.py",
-      "bytes": 23634,
-      "sha256": "a87f25e6d4d4a4634352a39509e6c12d286efca2b51b11e6e7a09a92757737dd"
+      "bytes": 23841,
+      "sha256": "02b0ce674c2f981c953ca0e1e4c2ddb5b65e4c73d3061dd51b4d7bac44717789"
     },
     {
       "path": "src/trade_area_local/web_catalog.py",
-      "bytes": 8635,
-      "sha256": "a9f549c0e7b4d80bfe9b905aa89c11f5cac47aa43b79689e9c97ac89edcff26f"
+      "bytes": 10537,
+      "sha256": "ca74ff42eab283a2bb76c90c0632d8ccc7274908ccaca928b0c654231c173689"
     },
     {
       "path": "src/trade_area_local/web_rules.py",
@@ -169,9 +169,8 @@
       "sha256": "c2569ba94accd786e0c0befbd3882d6edb6df3a93ea2841d525a203690629c27"
     }
   ],
-  "total_bytes": 6552930,
-  "notice": "Pacote sanitizado preparado e verificado por ASGI local. Nenhuma implantação executada nesta preparação.",
-  "deployment_target": "Render Free; prepared, not published",
-  "source_manifest_sha256": "0a6a753fbac635532e5ce9a1e8161f536b4da93716207a4ae39765eb57d775c9",
-  "manifest_self_excluded": true
+  "total_bytes": 6731355,
+  "notice": "Sanitized public map/search release; deployment verification is recorded separately.",
+  "hosting": "Render Free",
+  "source_commit": "95c385ddba8646e8ff230fa696bc6960cbd78465"
 }

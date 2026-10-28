@@ -1,13 +1,15 @@
-# Trade Area Lab no Render
+# Trade Area Lab
 
-Pacote sanitizado da demonstração com cadastro público de postos da ANP e transações simuladas. Contém a interface compilada e a API Python existentes. O pacote foi preparado localmente; a publicação e o acesso na rede corporativa ainda precisam ser verificados.
+Demonstração: https://trade-area-lab.onrender.com/
 
-Configure um serviço web Python com o arquivo `render.yaml`, usando o plano **Free**, sem banco, disco pago ou implantação automática. A versão do Python é selecionada pelo arquivo `.python-version`. Instalação: `pip install -r requirements.txt`. Inicialização: `uvicorn app:app --host 0.0.0.0 --port $PORT --workers 1`.
+Pacote público da interface React/Leaflet e API Python, com postos ANP e transações simuladas. Busca por nome, CNPJ, código, endereço, bairro e CEP, seleção explícita de origem/destino e recálculo de cenários.
 
-O serviço serve interface, arquivos estáticos e API no mesmo endereço. A verificação de saúde fica em `/api/health`. O catálogo público está incluído em `web/data`; não é necessário consultar ANP ou serviços corporativos durante a apresentação. O arquivo `vercel.json` permanece como metadado inerte da preparação original.
+O mapa consulta até 1.000 posições utilizáveis por filtro, independentemente da página da tabela; contagens e truncagem são explícitas. Um posto selecionado adicional pode aparecer além do conjunto do mapa.
 
-Distâncias geográficas e recálculo de cenários usam o motor Python incluído. O roteamento por estrada exige outro motor e permanece não configurado nesta publicação; `/api/route` retorna erro explícito de indisponibilidade. Não definir endereço de roteador externo para a máquina local.
+Ruas são fornecidas diretamente ao navegador por https://tile.openstreetmap.org, com atribuição © OpenStreetMap contributors e cache/Referer normais. Sem chave, proxy ou download em lote. O botão Mapa local usa a cartografia vetorial salva quando a camada externa estiver indisponível. A camada de ruas depende de internet e da política do provedor.
 
-Publique somente esta pasta sanitizada. Não acrescente arquivos privados, credenciais, histórico Git do projeto original, PDFs, transcrição, dados corporativos ou mapas brutos. `deployment-manifest.json` contém a lista de arquivos com seus hashes e exclui seu próprio conteúdo do cálculo.
+O modelo Python e a distância geográfica são locais ao serviço. O roteador viário não está hospedado: /api/route responde 503 explícito; GraphHopper permanece na instalação local separada.
 
-O plano gratuito tem limites e pode suspender o serviço por inatividade. O endereço novo também depende das políticas de acesso da organização. Não configure plano pago ou método de pagamento como parte desta preparação.
+Render Free, um worker, sem banco/disco adicional e deploy automático desligado. O workspace verificado é Hobby sem cartão. Limites/inatividade podem suspender a instância. Instalar com pip install -r requirements.txt e executar uvicorn app:app --host 0.0.0.0 --port $PORT --workers 1. Python3.12 é selecionado por .python-version.
+
+Somente este pacote sanitizado deve ser publicado. Não contém credenciais, documentos, histórico Git corporativo ou transações reais. deployment-manifest.json lista hashes dos arquivos, excluindo seu próprio conteúdo. vercel.json é metadado inerte da preparação original.
