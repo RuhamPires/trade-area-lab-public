@@ -7,11 +7,12 @@
 !api/
 !api/index.py
 !app.py
+!build_routing.py
 !deployment-manifest.json
 !public/
 !public/assets/
-!public/assets/index-B3BooWHS.css
-!public/assets/index-CuvCFNQI.js
+!public/assets/index-BXaODMPE.css
+!public/assets/index-Dh_xyA3q.js
 !public/data/
 !public/data/brasil-uf-source.json
 !public/data/brasil-uf.geojson
@@ -21,6 +22,9 @@
 !render.yaml
 !requirements-web.lock.txt
 !requirements.txt
+!routing-public/
+!routing-public/manifest.json
+!routing-public/map.osm.pbf
 !src/
 !src/trade_area_local/
 !src/trade_area_local/__init__.py
@@ -34,6 +38,7 @@
 !src/trade_area_local/reference_simulation.py
 !src/trade_area_local/road_routing.py
 !src/trade_area_local/simulation.py
+!src/trade_area_local/valhalla_routing.py
 !src/trade_area_local/web_api.py
 !src/trade_area_local/web_catalog.py
 !src/trade_area_local/web_rules.py

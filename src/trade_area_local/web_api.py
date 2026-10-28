@@ -9,6 +9,7 @@ import os
 from numbers import Real
 from pathlib import Path
 import re
+from threading import Lock
 
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
@@ -22,6 +23,7 @@ from .web_rules import EXPLORATORY_DEFAULTS, LIMITS, REFERENCE_DEFAULTS, method_
 
 MAX_RESPONSE_BYTES = 4_000_000
 MAX_REQUEST_BYTES = 256_000
+_HEAVY_LOCK = Lock()
 _RUN_FIELDS = {"catalog_version", "uf", "municipality", "station_ids", "mode", "base_date", "seed", "vehicles", "max_events", "days", "reference", "exploratory"}
 _RESULT_FIELDS = ("trade_area", "mode", "assignment_reason", "has_transactions", "is_dispersed", "cr", "area_profile", "scenario_segment", "segment_source", "transaction_count", "liters", "authorized_amount", "eligible_vehicle_count")
 _MOVE_FIELDS = ("pass", "station_id", "from_area", "to_area", "cr_before", "cr_after", "stage")
@@ -233,7 +235,7 @@ def _json_safe(value):
 @lru_cache(maxsize=1)
 def _code_digest():
     digest = hashlib.sha256()
-    for name in ("web_api.py", "web_catalog.py", "web_rules.py", "contracts.py", "model.py", "geometry.py", "simulation.py", "reference_contracts.py", "reference_model.py", "reference_simulation.py", "eligibility.py", "road_routing.py"):
+    for name in ("web_api.py", "web_catalog.py", "web_rules.py", "contracts.py", "model.py", "geometry.py", "simulation.py", "reference_contracts.py", "reference_model.py", "reference_simulation.py", "eligibility.py", "road_routing.py", "valhalla_routing.py"):
         path = Path(__file__).with_name(name)
         if path.exists():
             digest.update(name.encode())
@@ -329,20 +331,35 @@ def _distance(payload, catalog):
 
 def _road_route(payload, catalog):
     from .road_routing import RoadRouteError, RoadRoutingUnavailable, graphhopper_route
+    from .valhalla_routing import RegionalRouteError, configured_valhalla, valhalla_route
     _object(payload, 'percurso', {'origin_id', 'destination_id', 'origin', 'destination'})
     _finite_tree(payload)
     origin, destination = _point(payload, 'origin', catalog), _point(payload, 'destination', catalog)
     endpoint = os.environ.get('TRADE_AREA_ROUTER_URL')
-    if not endpoint:
+    config = configured_valhalla() if not endpoint else None
+    if not endpoint and config is None:
         _fail('Roteamento por estrada não configurado neste ambiente. Use a instalação local com um roteador ativo.', 503)
     try:
-        return _check_size(graphhopper_route(origin, destination, endpoint=endpoint))
+        result = graphhopper_route(origin, destination, endpoint=endpoint) if endpoint else valhalla_route(origin, destination, config_path=config)
+        return _check_size(result)
+    except RegionalRouteError as exc:
+        _fail(str(exc), 422)
     except RoadRoutingUnavailable:
         _fail('Roteador local indisponível. Verifique se o serviço de percurso está ativo.', 503)
     except RoadRouteError:
         _fail('Não foi possível obter um percurso válido para os pontos informados.', 502)
     except ValueError:
         _fail('Configuração do roteador local inválida. Verifique o serviço de percurso.', 503)
+
+
+def _execute_heavy(function, *args):
+    # Own the gate in the worker, including after an HTTP client disconnects.
+    if not _HEAVY_LOCK.acquire(blocking=False):
+        _fail('Há um cálculo ou percurso em execução. Aguarde sua conclusão e tente novamente.', 429)
+    try:
+        return function(*args)
+    finally:
+        _HEAVY_LOCK.release()
 
 
 def _nearby(payload, catalog):
@@ -418,7 +435,7 @@ def create_app(catalog: WebCatalog | None = None):
     @app.post("/api/run")
     async def run(request: Request):
         payload = await _body(request)
-        return await run_in_threadpool(execute_web_run, payload, current_catalog())
+        return await run_in_threadpool(_execute_heavy, execute_web_run, payload, current_catalog())
 
     @app.post("/api/distance")
     async def distance(request: Request):
@@ -430,6 +447,6 @@ def create_app(catalog: WebCatalog | None = None):
 
     @app.post('/api/route')
     async def road_route(request: Request):
-        return await run_in_threadpool(_road_route, await _body(request), current_catalog())
+        return await run_in_threadpool(_execute_heavy, _road_route, await _body(request), current_catalog())
 
     return app

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "package": "pyvalhalla",
+  "version": "3.9.1",
+  "pbf_file": "map.osm.pbf",
+  "pbf_bytes": 11612428,
+  "pbf_sha256": "92c9fbd8709381d3d9ff0d0169d79104827ab14841c99737115a7c4eea3c0c10",
+  "coverage": "Campinas–Jundiaí",
+  "bounds": [
+    -47.35,
+    -23.4,
+    -46.7,
+    -22.65
+  ],
+  "source_timestamp": "2026-10-26T21:24:46Z",
+  "license": "ODbL-1.0",
+  "attribution": "© OpenStreetMap contributors",
+  "copyright_url": "https://www.openstreetmap.org/copyright",
+  "source": "Public OpenStreetMap regional roads extract; no proprietary data"
+}

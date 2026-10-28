@@ -2,14 +2,18 @@
 
 Demonstração: https://trade-area-lab.onrender.com/
 
-Pacote público da interface React/Leaflet e API Python, com postos ANP e transações simuladas. Busca por nome, CNPJ, código, endereço, bairro e CEP, seleção explícita de origem/destino e recálculo de cenários.
+Interface React/Leaflet e API Python com cadastro público ANP e transações simuladas. Busca por nome, CNPJ, código, endereço, bairro e CEP, mapa de até 1.000 posições por filtro, origem/destino e recálculo de cenários.
 
-O mapa consulta até 1.000 posições utilizáveis por filtro, independentemente da página da tabela; contagens e truncagem são explícitas. Um posto selecionado adicional pode aparecer além do conjunto do mapa.
+Iniciar tour executa 13 etapas reais: busca, distância/raio, coordenadas, percurso viário, dois cenários, comparação e prévias CSV/JSON. Sua sessão permanece preservada e é restaurada ao sair. Nenhum download automático.
 
-Ruas são fornecidas diretamente ao navegador por https://tile.openstreetmap.org, com atribuição © OpenStreetMap contributors e cache/Referer normais. Sem chave, proxy ou download em lote. O botão Mapa local usa a cartografia vetorial salva quando a camada externa estiver indisponível. A camada de ruas depende de internet e da política do provedor.
+Valhalla 3.9.1 executa dentro do mesmo serviço, com grafo OpenStreetMap Campinas–Jundiaí. A API devolve geometria real, km e minutos estimados para carro sem trânsito em tempo real. Fora da cobertura retorna erro explícito. Não usa Google nem roteadores públicos de demonstração. O mapa regional tem timestamp 26/10/2026; routing-public/manifest.json registra origem, cobertura e hash. ODbL 1.0 e © OpenStreetMap contributors: https://www.openstreetmap.org/copyright .
 
-O modelo Python e a distância geográfica são locais ao serviço. O roteador viário não está hospedado: /api/route responde 503 explícito; GraphHopper permanece na instalação local separada.
+A camada visual de ruas consulta diretamente https://tile.openstreetmap.org com atribuição/cache/Referer normais, sem chave/proxy/download em lote. Mapa local e Somente percurso permitem visualizar os arquivos vetoriais salvos. Tiles externos dependem de internet e da política do provedor.
 
-Render Free, um worker, sem banco/disco adicional e deploy automático desligado. O workspace verificado é Hobby sem cartão. Limites/inatividade podem suspender a instância. Instalar com pip install -r requirements.txt e executar uvicorn app:app --host 0.0.0.0 --port $PORT --workers 1. Python3.12 é selecionado por .python-version.
+Render Free, um worker, sem banco/disco adicional e deploy automático desligado. O workspace verificado é Hobby sem cartão. Limites e inatividade podem suspender o serviço. Python 3.12; build: pip install -r requirements.txt && python build_routing.py . Start: uvicorn app:app --host 0.0.0.0 --port $PORT --workers 1 . Use os espaços mostrados em render.yaml para o comando exato.
 
-Somente este pacote sanitizado deve ser publicado. Não contém credenciais, documentos, histórico Git corporativo ou transações reais. deployment-manifest.json lista hashes dos arquivos, excluindo seu próprio conteúdo. vercel.json é metadado inerte da preparação original.
+O build gera tiles nativos Linux antes da promoção e exige smoke de rota, cobertura, perfil e modelo real de 1.000 postos/2.000 veículos simulados dentro do limite de memória/tempo. Não gere o grafo durante requisições nem copie tiles Windows. Rotas e modelos são serializados; concorrência pesada retorna 429.
+
+Fontes abertas: https://github.com/valhalla/valhalla e https://github.com/nilbuild/driver.js . O modelo Ward/CC/CR mantém as fórmulas documentadas. Esta demonstração não comprova equivalência com o sistema corporativo; essa comparação requer dados anonimizados e validação do time.
+
+Somente este pacote sanitizado deve ser publicado. Sem credenciais, documentos, histórico Git corporativo ou transações reais. deployment-manifest.json lista hashes dos arquivos, excluindo a si próprio. vercel.json é metadado inerte da preparação original.

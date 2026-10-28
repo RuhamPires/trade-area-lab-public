@@ -16,6 +16,7 @@ pandas==2.3.3
 pydantic==2.14.1
 pydantic_core==2.50.1
 pyproj==3.8.0
+pyvalhalla==3.9.1
 python-dateutil==3.0.0
 pytz==2026.5
 scikit-learn==1.9.1

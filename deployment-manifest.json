@@ -5,8 +5,8 @@
   "files": [
     {
       "path": ".gitignore",
-      "bytes": 1127,
-      "sha256": "887f48eb88e0025910d43cdf85e8b6fdccd6d6bf80f992fa2d6456a69639e6e8"
+      "bytes": 1262,
+      "sha256": "b77ca3590258a476465392c14500cea4aa0ef80859e0ae4db0ba791d18d41a92"
     },
     {
       "path": ".python-version",
@@ -15,8 +15,13 @@
     },
     {
       "path": ".vercelignore",
-      "bytes": 1065,
-      "sha256": "09206a5f6b1cd9ec6a984d0e436e4ab9546ee6e90530e970b61c5229c71f7cfd"
+      "bytes": 1200,
+      "sha256": "3149961b9b5611546b0c00f12ded40c9112d2bea6852c6ba9c4ff8da1754adc6"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2574,
+      "sha256": "4761158ccb077745873b358cb3cddb30d73f1ba269f4c7628bec95491cf5ee18"
     },
     {
       "path": "api/index.py",
@@ -29,14 +34,19 @@
       "sha256": "ed62a4f9e79c7fd5c0c99a25e48f4c7d6432c29f7e11f7e965d15f94e5af2d7e"
     },
     {
-      "path": "public/assets/index-B3BooWHS.css",
-      "bytes": 47393,
-      "sha256": "cb63a49eb616bbb9049366452707e107ab2e32c2ef4017734600a26960a0d0fe"
+      "path": "build_routing.py",
+      "bytes": 12100,
+      "sha256": "9f178d1dd92dcda8ce513dd2a1974c2b0f6bba02ece39719372b4de31ee24c35"
     },
     {
-      "path": "public/assets/index-CuvCFNQI.js",
-      "bytes": 450862,
-      "sha256": "c6a8bc8faf31587eb87b80c1420dc711b756e6f666c72257af0ebfb6b18014b2"
+      "path": "public/assets/index-BXaODMPE.css",
+      "bytes": 53861,
+      "sha256": "dfad7f5bff662e57a6ffe36ed9e756898cbd2841745b700b1be46530074f33d7"
+    },
+    {
+      "path": "public/assets/index-Dh_xyA3q.js",
+      "bytes": 496975,
+      "sha256": "fd4851384d91cd30fcb4ee55f4e41ab6af3a1e1a6391385d3197f2d8576a5cde"
     },
     {
       "path": "public/data/brasil-uf-source.json",
@@ -61,27 +71,32 @@
     {
       "path": "public/index.html",
       "bytes": 667,
-      "sha256": "a5ebebfc40ea70e3992b657cf1cfe9887be5269f40978c4286183b8e33c546eb"
-    },
-    {
-      "path": "README.md",
-      "bytes": 1702,
-      "sha256": "5c0b56f8c466bc01a91fbc31d54783ede4892e002e15f1d1f370c5c3de98a5e3"
+      "sha256": "c0a29489a8d940def44ed5142ff2179f5bd4567474ed1db4e51d9be363d0d528"
     },
     {
       "path": "render.yaml",
-      "bytes": 432,
-      "sha256": "387fce2633f4b87586bbbd52373094e1d652b0d354198ef7da2b58da8e1f9710"
+      "bytes": 459,
+      "sha256": "cdd80eb2fb51b870f303f639ee4ea2440239b1d501bdd0242b2fb802106ccdb6"
     },
     {
       "path": "requirements-web.lock.txt",
-      "bytes": 600,
-      "sha256": "78fab8d91740554848c14aa34bafb79bd7fd0dd6108b975e9655b8c9b39e892b"
+      "bytes": 589,
+      "sha256": "14cd66bf10efd9bb6c48cea3e586c1ecff0127cd670a9dd6c9422826ec6f2017"
     },
     {
       "path": "requirements.txt",
-      "bytes": 600,
-      "sha256": "78fab8d91740554848c14aa34bafb79bd7fd0dd6108b975e9655b8c9b39e892b"
+      "bytes": 589,
+      "sha256": "14cd66bf10efd9bb6c48cea3e586c1ecff0127cd670a9dd6c9422826ec6f2017"
+    },
+    {
+      "path": "routing-public/manifest.json",
+      "bytes": 577,
+      "sha256": "88b76a3541d2832370ed650c65f23d8c6af209569dd1343610f45eb818513a0a"
+    },
+    {
+      "path": "routing-public/map.osm.pbf",
+      "bytes": 11612428,
+      "sha256": "92c9fbd8709381d3d9ff0d0169d79104827ab14841c99737115a7c4eea3c0c10"
     },
     {
       "path": "src/trade_area_local/__init__.py",
@@ -139,9 +154,14 @@
       "sha256": "f13f4666de2e4d1607d6937dd500cc83f7a2848a25f93e56987ab34ef9940d97"
     },
     {
+      "path": "src/trade_area_local/valhalla_routing.py",
+      "bytes": 6711,
+      "sha256": "16de8d39e15e3108d0c9c1081803e389ade1caac48a4f749003bbead7e0d615e"
+    },
+    {
       "path": "src/trade_area_local/web_api.py",
-      "bytes": 23841,
-      "sha256": "02b0ce674c2f981c953ca0e1e4c2ddb5b65e4c73d3061dd51b4d7bac44717789"
+      "bytes": 24633,
+      "sha256": "5199aeb88a2c0300bb480605ae81bf1368b94e6fcddc8963540bb787e0d61f9d"
     },
     {
       "path": "src/trade_area_local/web_catalog.py",
@@ -169,8 +189,14 @@
       "sha256": "c2569ba94accd786e0c0befbd3882d6edb6df3a93ea2841d525a203690629c27"
     }
   ],
-  "total_bytes": 6731355,
-  "notice": "Sanitized public map/search release; deployment verification is recorded separately.",
-  "hosting": "Render Free",
-  "source_commit": "95c385ddba8646e8ff230fa696bc6960cbd78465"
+  "total_bytes": 18417691,
+  "notice": "Pacote público regional sanitizado para o serviço Render Free existente; promoção requer smoke Linux e verificação pública.",
+  "routing": {
+    "included": true,
+    "provider": "valhalla",
+    "version": "3.9.1",
+    "coverage": "Campinas–Jundiaí",
+    "native_build_required": "linux",
+    "build_command": "pip install -r requirements.txt && python build_routing.py"
+  }
 }
