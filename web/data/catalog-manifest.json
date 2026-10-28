@@ -1,0 +1,64 @@
+{
+  "version": "anp-brasil-20261027T123042Z-resolutions-5161",
+  "source": "Cadastro nacional público ANP e complementos documentados",
+  "source_file": "catalogo_atual.csv",
+  "source_sha256": "6586d7c3619314d6ff2686df287032e99175809a5eca8bc07cf8d5cb0c05f0db",
+  "sha256": "c2569ba94accd786e0c0befbd3882d6edb6df3a93ea2841d525a203690629c27",
+  "payload_sha256": "6662ddd5a488cc6492cf60fa1e0f783e54cc7012e7a13776a8845a003bfca704",
+  "counts": {
+    "total": 45807,
+    "available": 43989,
+    "missing": 1734,
+    "review": 84,
+    "pending": 1818
+  },
+  "fields": [
+    "station_id",
+    "cnpj",
+    "name",
+    "municipality",
+    "uf",
+    "address",
+    "neighborhood",
+    "postal_code",
+    "latitude",
+    "longitude",
+    "coordinate_status",
+    "coordinate_source",
+    "coordinate_date",
+    "coordinate_precision",
+    "segment"
+  ],
+  "compressed_bytes": 3208356,
+  "uncompressed_bytes": 19965912,
+  "crs": "EPSG:4326",
+  "coordinate_order": [
+    "latitude",
+    "longitude"
+  ],
+  "notice": "Coordenadas disponíveis não significam GPS ou funcionamento verificados atualmente.",
+  "attribution": [
+    {
+      "source": "ANP",
+      "url": "https://www.gov.br/anp/"
+    },
+    {
+      "source": "CNEFE/IBGE",
+      "period": "2022",
+      "url": "https://www.ibge.gov.br/"
+    },
+    {
+      "source": "IBAMA/PAMGIA",
+      "url": "https://pamgia.ibama.gov.br/"
+    },
+    {
+      "source": "© OpenStreetMap contributors",
+      "license": "ODbL-1.0",
+      "url": "https://www.openstreetmap.org/copyright"
+    },
+    {
+      "source": "Shell — localizador público; ANP/GeoMaps2025",
+      "period": "medição desconhecida ou histórica"
+    }
+  ]
+}

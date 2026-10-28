@@ -1,0 +1,16 @@
+{
+  "source": "IBGE - API de malhas simplificadas",
+  "url": "https://servicodados.ibge.gov.br/api/v3/malhas/paises/BR?formato=application/vnd.geo+json&qualidade=minima&intrarregiao=UF",
+  "features": 27,
+  "sha256": "5961f5b9a305259c255ecd2d912be7ef2247155fc43457db462a3b81c97ac721",
+  "bytes": 99358,
+  "content_encoding": "gzip",
+  "purpose": "Visualizacao apenas; coordenadas dos postos preservadas",
+  "properties": [
+    "codarea",
+    "sigla",
+    "nome"
+  ],
+  "labels_source": "https://servicodados.ibge.gov.br/api/v1/localidades/estados",
+  "labels_sha256": "7ca1368dea3af83cba1af84ae8a7e88f1173c97586831d086cc8b3c1ba9c6596"
+}
