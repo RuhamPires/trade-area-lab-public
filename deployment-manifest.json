@@ -6,7 +6,7 @@
     {
       "path": ".gitignore",
       "bytes": 1262,
-      "sha256": "b77ca3590258a476465392c14500cea4aa0ef80859e0ae4db0ba791d18d41a92"
+      "sha256": "f07b390ed17397b0814732ef08d529ac8b45245373118e116f39b0aa626f44ab"
     },
     {
       "path": ".python-version",
@@ -16,7 +16,7 @@
     {
       "path": ".vercelignore",
       "bytes": 1200,
-      "sha256": "3149961b9b5611546b0c00f12ded40c9112d2bea6852c6ba9c4ff8da1754adc6"
+      "sha256": "86879227c62a0276d4dcdac576dce4fe952485e7b4f1231ed7f8773563c1d835"
     },
     {
       "path": "README.md",
@@ -39,12 +39,12 @@
       "sha256": "9f178d1dd92dcda8ce513dd2a1974c2b0f6bba02ece39719372b4de31ee24c35"
     },
     {
-      "path": "public/assets/index-BXaODMPE.css",
-      "bytes": 53861,
-      "sha256": "dfad7f5bff662e57a6ffe36ed9e756898cbd2841745b700b1be46530074f33d7"
+      "path": "public/assets/index-CeC3yZsj.css",
+      "bytes": 53971,
+      "sha256": "1ab09b7e7c4ce7c9b72e5246055d7db56fe8b793329af2b06cedc9f3335e6b61"
     },
     {
-      "path": "public/assets/index-Dh_xyA3q.js",
+      "path": "public/assets/index-DAuDC_tL.js",
       "bytes": 496975,
       "sha256": "fd4851384d91cd30fcb4ee55f4e41ab6af3a1e1a6391385d3197f2d8576a5cde"
     },
@@ -71,7 +71,7 @@
     {
       "path": "public/index.html",
       "bytes": 667,
-      "sha256": "c0a29489a8d940def44ed5142ff2179f5bd4567474ed1db4e51d9be363d0d528"
+      "sha256": "1259a44c70e7c24384bb0ea6e652ca00a517223a575609b8f190063d605f45ee"
     },
     {
       "path": "render.yaml",
@@ -189,7 +189,7 @@
       "sha256": "c2569ba94accd786e0c0befbd3882d6edb6df3a93ea2841d525a203690629c27"
     }
   ],
-  "total_bytes": 18417691,
+  "total_bytes": 18417801,
   "notice": "Pacote público regional sanitizado para o serviço Render Free existente; promoção requer smoke Linux e verificação pública.",
   "routing": {
     "included": true,
