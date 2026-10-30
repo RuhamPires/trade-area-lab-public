@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "asset": "/data/phoenix-00e92b7be45b.html.gz",
+  "sha256": "00e92b7be45bb59f52a70b985abe1b91a60ce4cc788ac3c5a49ed785f4cc0ea4",
+  "uncompressed_bytes": 12324363,
+  "compressed_bytes": 2904344,
+  "gzip_sha256": "9be104078e120e0d981bb31040aee59f597255a1100f0546a9e768331e040e87",
+  "snapshot_date": "2026-10-29",
+  "targets": 98,
+  "directions": 4618,
+  "publication_authorized": true
+}

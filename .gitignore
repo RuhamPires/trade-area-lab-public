@@ -11,13 +11,15 @@
 !deployment-manifest.json
 !public/
 !public/assets/
-!public/assets/index-C3zDnQQa.css
-!public/assets/index-acgengn4.js
+!public/assets/index-CYM5bO6M.css
+!public/assets/index-DnS0wnDQ.js
 !public/data/
 !public/data/brasil-uf-source.json
 !public/data/brasil-uf.geojson
 !public/data/catalog-manifest.json
 !public/data/catalogo-publico.csv.gz
+!public/data/phoenix-00e92b7be45b.html.gz
+!public/data/phoenix-manifest.json
 !public/index.html
 !render.yaml
 !requirements-web.lock.txt

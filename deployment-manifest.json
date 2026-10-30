@@ -5,8 +5,8 @@
   "files": [
     {
       "path": ".gitignore",
-      "bytes": 1262,
-      "sha256": "849b56bd817dc20edd412c28e56f20f80377b8e170de3ba1fdabe13bb06b209f"
+      "bytes": 1339,
+      "sha256": "e96a1da3a80575d3ec046cfeffa315b66e002f8a5ae9a7575f7ff3903f0bd7b0"
     },
     {
       "path": ".python-version",
@@ -15,13 +15,13 @@
     },
     {
       "path": ".vercelignore",
-      "bytes": 1200,
-      "sha256": "3f36c502270e00679284cb8f76ca116a2860c69e062139021c4674a776b476dc"
+      "bytes": 1339,
+      "sha256": "e96a1da3a80575d3ec046cfeffa315b66e002f8a5ae9a7575f7ff3903f0bd7b0"
     },
     {
       "path": "README.md",
-      "bytes": 3266,
-      "sha256": "dcfc7183b39e84138ee9ebe791e4adb736e0178655ca0a06a70c846cfa5d5f53"
+      "bytes": 3274,
+      "sha256": "dddb48bc7ca7419ec2fb0e9832530d242dba008ea1a468282582d58cfb84fa88"
     },
     {
       "path": "api/index.py",
@@ -39,14 +39,14 @@
       "sha256": "9f178d1dd92dcda8ce513dd2a1974c2b0f6bba02ece39719372b4de31ee24c35"
     },
     {
-      "path": "public/assets/index-C3zDnQQa.css",
-      "bytes": 55500,
-      "sha256": "3ed62348e4367fe8989c258e4977f995e19e9aa5745fbd96e527c51a8727eba0"
+      "path": "public/assets/index-CYM5bO6M.css",
+      "bytes": 55677,
+      "sha256": "16390c63ebfbd3490bad0e96e7cee665a05de5f568a43151f2e72c6cbd46295d"
     },
     {
-      "path": "public/assets/index-acgengn4.js",
-      "bytes": 503171,
-      "sha256": "894e7250021e6d55db84883fac6c90693d8e2a2cfc7c329d628df0b0f890e1e9"
+      "path": "public/assets/index-DnS0wnDQ.js",
+      "bytes": 504614,
+      "sha256": "4e2919ec79f56abaeb5226804eaf685891a7a972c033f58bef67c0d32e750634"
     },
     {
       "path": "public/data/brasil-uf-source.json",
@@ -69,9 +69,19 @@
       "sha256": "3d8b914c4c16201d0eee6f7de698b7dc17f5976f803f6c13a10f2053a79c2b37"
     },
     {
+      "path": "public/data/phoenix-00e92b7be45b.html.gz",
+      "bytes": 2904344,
+      "sha256": "9be104078e120e0d981bb31040aee59f597255a1100f0546a9e768331e040e87"
+    },
+    {
+      "path": "public/data/phoenix-manifest.json",
+      "bytes": 416,
+      "sha256": "dc2a9782518da4c7ac471ac27a7826a61573e06fea1b85eeb40c7e62738891e3"
+    },
+    {
       "path": "public/index.html",
       "bytes": 667,
-      "sha256": "4fee5e76317ce47884fafe563bf8809f420ab08c13498f398d717aee5ddf3ec3"
+      "sha256": "20bab16e8234e4817c97b7039cd7eb262ae08afec14650c02ab295acff7471c2"
     },
     {
       "path": "render.yaml",
@@ -189,8 +199,8 @@
       "sha256": "c2569ba94accd786e0c0befbd3882d6edb6df3a93ea2841d525a203690629c27"
     }
   ],
-  "total_bytes": 18426218,
-  "notice": "Public viewer and public/simulated catalog only. No private Phoenix content. Same existing Render Free service.",
+  "total_bytes": 21332822,
+  "notice": "Same Render Free, public/simulated catalog plus exactly the explicitly approved Phoenix snapshot.",
   "routing": {
     "included": true,
     "provider": "valhalla",
@@ -200,9 +210,10 @@
     "build_command": "pip install -r requirements.txt && python build_routing.py"
   },
   "phoenix": {
-    "public_viewer_only": true,
-    "private_data_included": false,
-    "browser_local_import": true,
-    "corporate_backend_endpoint": false
+    "snapshot_included": true,
+    "explicit_publication_authorized": true,
+    "snapshot_sha256": "00e92b7be45bb59f52a70b985abe1b91a60ce4cc788ac3c5a49ed785f4cc0ea4",
+    "asset": "/data/phoenix-00e92b7be45b.html.gz",
+    "requires_local_file": false
   }
 }

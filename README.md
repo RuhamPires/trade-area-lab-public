@@ -20,6 +20,6 @@ Somente este pacote sanitizado deve ser publicado. Sem credenciais, documentos, 
 
 ## Aba Phoenix MG
 
-A aba #phoenix contém somente um visualizador. O usuário escolhe no próprio navegador o HTML original da entrega privada. A versão integral é conferida por SHA256 antes de abrir num iframe isolado, sem acesso à origem da aplicação e com conexões externas bloqueadas pela CSP do painel.
+O snapshot Phoenix aprovado para publicação é carregado automaticamente ao abrir #phoenix. A versão publicada contém os cadastros/valores recebidos, conferências e percursos já calculados; não executa o modelo corporativo nem demonstra economia aprovada ou equivalência Google.
 
-O arquivo não é enviado à API, GitHub ou Render nem persistido pelo visualizador. Trocar de aba mantém o painel em memória; remover/atualizar/fechar perde alterações ainda não exportadas. A planilha XLSX da entrega continua separada. Nenhum dado corporativo está neste pacote. O autoload depende de um shell privado em loopback que não faz parte desta publicação.
+O asset gzip imutável é descompactado e conferido por SHA256 no navegador antes de abrir no iframe isolado. A aba mantém estado entre navegações; Atualizar dados recarrega o retrato publicado. Arquivo local é opcional. Não há SSO ou controle de acesso nesta versão pública, conforme autorização explícita para este snapshot. Outras bases não estão autorizadas por inferência.
