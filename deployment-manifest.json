@@ -6,7 +6,7 @@
     {
       "path": ".gitignore",
       "bytes": 1262,
-      "sha256": "f07b390ed17397b0814732ef08d529ac8b45245373118e116f39b0aa626f44ab"
+      "sha256": "849b56bd817dc20edd412c28e56f20f80377b8e170de3ba1fdabe13bb06b209f"
     },
     {
       "path": ".python-version",
@@ -16,12 +16,12 @@
     {
       "path": ".vercelignore",
       "bytes": 1200,
-      "sha256": "86879227c62a0276d4dcdac576dce4fe952485e7b4f1231ed7f8773563c1d835"
+      "sha256": "3f36c502270e00679284cb8f76ca116a2860c69e062139021c4674a776b476dc"
     },
     {
       "path": "README.md",
-      "bytes": 2574,
-      "sha256": "4761158ccb077745873b358cb3cddb30d73f1ba269f4c7628bec95491cf5ee18"
+      "bytes": 3266,
+      "sha256": "dcfc7183b39e84138ee9ebe791e4adb736e0178655ca0a06a70c846cfa5d5f53"
     },
     {
       "path": "api/index.py",
@@ -39,14 +39,14 @@
       "sha256": "9f178d1dd92dcda8ce513dd2a1974c2b0f6bba02ece39719372b4de31ee24c35"
     },
     {
-      "path": "public/assets/index-CeC3yZsj.css",
-      "bytes": 53971,
-      "sha256": "1ab09b7e7c4ce7c9b72e5246055d7db56fe8b793329af2b06cedc9f3335e6b61"
+      "path": "public/assets/index-C3zDnQQa.css",
+      "bytes": 55500,
+      "sha256": "3ed62348e4367fe8989c258e4977f995e19e9aa5745fbd96e527c51a8727eba0"
     },
     {
-      "path": "public/assets/index-DAuDC_tL.js",
-      "bytes": 496975,
-      "sha256": "fd4851384d91cd30fcb4ee55f4e41ab6af3a1e1a6391385d3197f2d8576a5cde"
+      "path": "public/assets/index-acgengn4.js",
+      "bytes": 503171,
+      "sha256": "894e7250021e6d55db84883fac6c90693d8e2a2cfc7c329d628df0b0f890e1e9"
     },
     {
       "path": "public/data/brasil-uf-source.json",
@@ -71,7 +71,7 @@
     {
       "path": "public/index.html",
       "bytes": 667,
-      "sha256": "1259a44c70e7c24384bb0ea6e652ca00a517223a575609b8f190063d605f45ee"
+      "sha256": "4fee5e76317ce47884fafe563bf8809f420ab08c13498f398d717aee5ddf3ec3"
     },
     {
       "path": "render.yaml",
@@ -189,8 +189,8 @@
       "sha256": "c2569ba94accd786e0c0befbd3882d6edb6df3a93ea2841d525a203690629c27"
     }
   ],
-  "total_bytes": 18417801,
-  "notice": "Pacote público regional sanitizado para o serviço Render Free existente; promoção requer smoke Linux e verificação pública.",
+  "total_bytes": 18426218,
+  "notice": "Public viewer and public/simulated catalog only. No private Phoenix content. Same existing Render Free service.",
   "routing": {
     "included": true,
     "provider": "valhalla",
@@ -198,5 +198,11 @@
     "coverage": "Campinas–Jundiaí",
     "native_build_required": "linux",
     "build_command": "pip install -r requirements.txt && python build_routing.py"
+  },
+  "phoenix": {
+    "public_viewer_only": true,
+    "private_data_included": false,
+    "browser_local_import": true,
+    "corporate_backend_endpoint": false
   }
 }

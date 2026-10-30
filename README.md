@@ -17,3 +17,9 @@ O build gera tiles nativos Linux antes da promoção e exige smoke de rota, cobe
 Fontes abertas: https://github.com/valhalla/valhalla e https://github.com/nilbuild/driver.js . O modelo Ward/CC/CR mantém as fórmulas documentadas. Esta demonstração não comprova equivalência com o sistema corporativo; essa comparação requer dados anonimizados e validação do time.
 
 Somente este pacote sanitizado deve ser publicado. Sem credenciais, documentos, histórico Git corporativo ou transações reais. deployment-manifest.json lista hashes dos arquivos, excluindo a si próprio. vercel.json é metadado inerte da preparação original.
+
+## Aba Phoenix MG
+
+A aba #phoenix contém somente um visualizador. O usuário escolhe no próprio navegador o HTML original da entrega privada. A versão integral é conferida por SHA256 antes de abrir num iframe isolado, sem acesso à origem da aplicação e com conexões externas bloqueadas pela CSP do painel.
+
+O arquivo não é enviado à API, GitHub ou Render nem persistido pelo visualizador. Trocar de aba mantém o painel em memória; remover/atualizar/fechar perde alterações ainda não exportadas. A planilha XLSX da entrega continua separada. Nenhum dado corporativo está neste pacote. O autoload depende de um shell privado em loopback que não faz parte desta publicação.
