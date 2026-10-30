@@ -6,7 +6,7 @@
     {
       "path": ".gitignore",
       "bytes": 1339,
-      "sha256": "c09c88859d682b3c9016aa485e9313d7ace4711b3b383a92e50d5796b52597e3"
+      "sha256": "66978c7baf347eeb877abe604189703a6757ffb39114a5dccd1a7343b8bed744"
     },
     {
       "path": ".python-version",
@@ -16,7 +16,7 @@
     {
       "path": ".vercelignore",
       "bytes": 1339,
-      "sha256": "c09c88859d682b3c9016aa485e9313d7ace4711b3b383a92e50d5796b52597e3"
+      "sha256": "66978c7baf347eeb877abe604189703a6757ffb39114a5dccd1a7343b8bed744"
     },
     {
       "path": "README.md",
@@ -44,9 +44,9 @@
       "sha256": "16390c63ebfbd3490bad0e96e7cee665a05de5f568a43151f2e72c6cbd46295d"
     },
     {
-      "path": "public/assets/index-DHgJ_c58.js",
+      "path": "public/assets/index-hv6pj-sX.js",
       "bytes": 504614,
-      "sha256": "c5cb181f65eb1d14b01e6a04cc6b5b996892b38d7d9aa9b3de09d6e3e919abaf"
+      "sha256": "9ca86a383becd01e25c60c84776b8d6d80831fbe29f76f1ac0bd6e087477839e"
     },
     {
       "path": "public/data/brasil-uf-source.json",
@@ -69,19 +69,19 @@
       "sha256": "3d8b914c4c16201d0eee6f7de698b7dc17f5976f803f6c13a10f2053a79c2b37"
     },
     {
-      "path": "public/data/phoenix-bd16b19d3be8.html.gz",
-      "bytes": 2903583,
-      "sha256": "543604b4556bf40db1b5ba5ccfcd48d8b95a14a9b395bda59177640104a3fb1c"
+      "path": "public/data/phoenix-482400e45f5e.html.gz",
+      "bytes": 5732307,
+      "sha256": "86c3d1c2241704809aaeb4e03034b635d412d81de1d78635b53ff095ffbe63af"
     },
     {
       "path": "public/data/phoenix-manifest.json",
-      "bytes": 453,
-      "sha256": "40c078f14d7be99e4d2f1f433e9dabc0ec891fbf2b6377f442ee159209fe3f2e"
+      "bytes": 481,
+      "sha256": "397422765bca33b77467fd9b0096f8ad8fc6728e1539ac0b0db742885326499a"
     },
     {
       "path": "public/index.html",
       "bytes": 667,
-      "sha256": "0b1e71de76946c6fd0b1a5309153d16da9db5c284e8e31b6c52db04b7ddb4937"
+      "sha256": "2e21ac46a97934b4117c23981e2b56144741b04f474412042e6d7f5377fdd4fd"
     },
     {
       "path": "render.yaml",
@@ -199,7 +199,7 @@
       "sha256": "c2569ba94accd786e0c0befbd3882d6edb6df3a93ea2841d525a203690629c27"
     }
   ],
-  "total_bytes": 21332098,
+  "total_bytes": 24160850,
   "notice": "Same Render Free, public/simulated catalog plus exactly the explicitly approved Phoenix snapshot.",
   "routing": {
     "included": true,
@@ -212,8 +212,8 @@
   "phoenix": {
     "snapshot_included": true,
     "explicit_publication_authorized": true,
-    "snapshot_sha256": "bd16b19d3be8558e484781a126e9403d1f94947a4687fb2d5b4dbacd374f80fb",
-    "asset": "/data/phoenix-bd16b19d3be8.html.gz",
+    "snapshot_sha256": "482400e45f5e3c9b5a3114b3461b14c760b67d794b05a3133826a2dcf81f4001",
+    "asset": "/data/phoenix-482400e45f5e.html.gz",
     "requires_local_file": false
   }
 }

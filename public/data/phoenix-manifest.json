@@ -1,13 +1,14 @@
 {
   "version": 1,
-  "asset": "/data/phoenix-bd16b19d3be8.html.gz",
-  "sha256": "bd16b19d3be8558e484781a126e9403d1f94947a4687fb2d5b4dbacd374f80fb",
-  "uncompressed_bytes": 12322430,
-  "compressed_bytes": 2903583,
-  "gzip_sha256": "543604b4556bf40db1b5ba5ccfcd48d8b95a14a9b395bda59177640104a3fb1c",
+  "asset": "/data/phoenix-482400e45f5e.html.gz",
+  "sha256": "482400e45f5e3c9b5a3114b3461b14c760b67d794b05a3133826a2dcf81f4001",
+  "uncompressed_bytes": 16059698,
+  "compressed_bytes": 5732307,
+  "gzip_sha256": "86c3d1c2241704809aaeb4e03034b635d412d81de1d78635b53ff095ffbe63af",
   "snapshot_date": "2026-10-29",
   "targets": 98,
   "directions": 4618,
   "publication_authorized": true,
-  "message_section_present": false
+  "message_section_present": false,
+  "offline_basemap": true
 }
